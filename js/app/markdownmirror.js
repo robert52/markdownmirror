@@ -1,8 +1,13 @@
-(function() {
+window.MarkdownMirror = (function() {
   'use strict';
 
   var delay;
   var preview = document.getElementById('mm-entry-preview');
+
+
+  function MarkdownMirror(options) {
+
+  }
 
   function update() {
     var val = editor.getValue();
@@ -31,5 +36,7 @@
   });
 
   console.log(editor);
+
+  return MarkdownMirror;
 
 })();
