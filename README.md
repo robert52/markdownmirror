@@ -6,14 +6,16 @@ MarkdownMirror is a JavaScript component that creates a markdown editor and outp
 
 - Download the source code or clone the repo on GitHub.
 - Drop it into your project
-- Usage:
+
+###Usage:
+
 ```javascript
-  <script type="text/javascript">
-    var editor = MarkdownMirror.init({
-      element: 'editor-wrapper'
-    });
-  </script>
+
+  var editor = MarkdownMirror.init({
+    element: 'editor-wrapper' //editor holder id
+  });
 ```
+
 
 ##Configuration
 Coming soon...
