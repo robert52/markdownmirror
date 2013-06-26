@@ -9,12 +9,16 @@
 
   <body>
 
+    <div id="editor-wrapper" class="mm-editor-wrapper"></div>
+
+    <!--
     <div class="mm-editor-wrapper">
       <div class="mm-entry-markdown">
         <textarea id="mm-editor-area"></textarea>
       </div>
       <div id="mm-entry-preview" class="mm-entry-preview"></div>
     </div>
+    -->
 
     <script src="js/lib/codemirror/lib/codemirror.js"></script>
     <script src="js/lib/codemirror/addon/edit/continuelist.js"></script>
@@ -25,6 +29,10 @@
     <script src="js/lib/marked.js"></script>
 
     <script src="js/app/markdownmirror.js"></script>
-
+    <script type="text/javascript">
+      var editor = MarkdownMirror.init({
+        element: 'editor-wrapper'
+      });
+    </script>
   </body>
 </html>
