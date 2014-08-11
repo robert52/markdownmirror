@@ -40,17 +40,19 @@ var MarkdownMirror = (function() {
    *
    */
   function __createEditorStructure() {
-      var frag = document.createDocumentFragment();
-      this.markdown = _createNode('div', null, 'mm-entry-markdown');
-      this.preview = _createNode('div', null, 'mm-entry-preview');
-      this.textarea = _createNode('textarea');
-      this.textarea.id = 'mm-editor-area';
+    var frag = document.createDocumentFragment();
+    this.main = _createNode('section', null, 'mm-main');
+    this.markdown = _createNode('section', null, 'mm-entry-markdown');
+    this.preview = _createNode('section', null, 'mm-entry-preview');
+    this.textarea = _createNode('textarea');
+    this.textarea.id = 'mm-editor-area';
 
-      this.markdown.appendChild(this.textarea);
-      frag.appendChild(this.markdown);
-      frag.appendChild(this.preview);
+    this.markdown.appendChild(this.textarea);
+    frag.appendChild(this.main);
+    this.main.appendChild(this.markdown);
+    this.main.appendChild(this.preview);
 
-      this.element.appendChild(frag);
+    this.element.appendChild(frag);
   }
 
   return {
@@ -90,10 +92,16 @@ var MarkdownMirror = (function() {
       //create the codemirror editor
       this.editor = CodeMirror.fromTextArea(this.textarea, {
         mode: 'gfm',
+        tabMode: 'indent',
+        tabindex: '2',
+        lineWrapping: true,
+        dragDrop: false,
         lineNumbers: options.lineNumber || false,
         theme: 'default',
         extraKeys: {
-          'Enter': 'newlineAndIndentContinueMarkdownList'
+          Enter: 'newlineAndIndentContinueMarkdownList',
+          Home: 'goLineLeft',
+          End: 'goLineRight'
         }
       });
 

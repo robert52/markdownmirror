@@ -1,0 +1,36 @@
+.mm-editor-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.mm-main {
+  position: relative;
+  height: 100%;
+}
+
+.mm-entry-markdown,
+.mm-entry-preview {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.mm-entry-markdown {
+}
+
+.mm-entry-preview {
+  right: 0;
+}
+
+.mm-entry-markdown .CodeMirror {
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
