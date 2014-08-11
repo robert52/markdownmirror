@@ -97,7 +97,7 @@ var MarkdownMirror = (function() {
         lineWrapping: true,
         dragDrop: false,
         lineNumbers: options.lineNumber || false,
-        theme: 'default',
+        theme: options.theme || 'default',
         extraKeys: {
           Enter: 'newlineAndIndentContinueMarkdownList',
           Home: 'goLineLeft',
