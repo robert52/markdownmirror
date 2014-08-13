@@ -1,1 +1,3 @@
 .mm-editor-wrapper, .cm-s-purpur.CodeMirror { background: #6351ad; color: #f4f3f9;}
+.cm-s-purpur.CodeMirror { font-size: inherit; }
+.cm-s-purpur.CodeMirror div.CodeMirror-cursor { border-color: #f4f3f9; }

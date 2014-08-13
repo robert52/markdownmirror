@@ -16,10 +16,21 @@
   position: absolute;
   top: 0;
   bottom: 0;
+  box-sizing: border-box;
+  padding: 15px;
   width: 50%;
 }
 
-.mm-entry-markdown {
+.mm-editor-wrapper {
+  overflow: hidden;
+}
+
+.mm-entry-preview {
+  overflow-y: scroll;
+}
+
+.mm-entry-markdown .CodeMirror {
+  padding: 15px;
 }
 
 .mm-entry-preview {
